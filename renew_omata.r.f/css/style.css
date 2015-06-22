@@ -1,0 +1,61 @@
+body{
+	margin: 0px;
+	background: #000000;
+	background-image: url(../img/orf_logo_2.jpg);
+	background-repeat: no-repeat;
+	background-position : 50% 50%;
+	background-attachment: fixed;
+/*	background: transparent; */
+/*	font-weight: bolder; */
+/*	font-size: 90%;
+	width: 800px;
+	height: 520px;
+	border: solid 2px #444444;*/
+	line-height: 130%;
+}
+
+a:link { color: #00cc00; }
+a:visited { color: #00cc00; }
+a:hover { color: #00ff00; background-color: #008800;}
+a:active { color: #00ff00; }
+
+#all{
+	font-size: 90%;
+	margin: 0px;
+}
+/* グローバルナビ指定 */
+#g_navi{
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	height: 26px;
+	margin: 0px;
+/*	position:relative;*/
+}
+
+#g_navi ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#g_navi li{
+	width: 100px;
+	height: 24px;
+	margin: 0px;
+	border: solid 1px #00cc00;
+}
+
+#g_navi a{
+	font-weight: bold; 
+	display: block;
+	line-height: 24px;
+	text-align: center;
+	text-decoration: none;
+}
+
+/* メインテキスト部指定 */
+#main_txt{
+	margin: 15px;
+	color: #ffffff;
+}

@@ -1,0 +1,19 @@
+.map{
+	z-index:3;
+	position: absolute;
+	top: 380px;  
+	left: 530px;	
+	display:block;
+	width: 90px;
+	height: 37px;
+	background-image: url("./../img/map_up.gif");
+}
+.map:hover{
+	z-index:4;
+	background-position: -90px 0px;
+	top: 230px;
+	left: 378px;
+	width: 400px;
+	height: 300px;
+	}
+

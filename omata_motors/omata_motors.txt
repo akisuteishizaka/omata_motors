@@ -1,0 +1,69 @@
+﻿//------------------------------------------------------------------------------
+//	omata_motors.wjg.jp/
+//	kurachano.mydns.jp/~omata_motors/
+//	
+// ディレクトリ構造。public_html以下の構造
+//------------------------------------------------------------------------------
+
+
+/ (public_html)
+│
+├─ index.php
+├─ contents.php
+├─ contents.php
+├─ contents.php
+│
+├─<dir> css/
+│	├ stylesheet.css
+│	･
+│	･
+│	･
+│
+├─<dir> img/
+│	├ image_file.jpg
+│	･
+│	･
+│	･
+│
+├─<dir>script/ 
+│	│
+│	├ php_out_out
+│	├ php_config.php
+│	├ JavaScript.js
+│	│
+│	├<dir> admin/
+│	│	├ index.php
+│	│	├ php_script.php
+│	│	└ out_put
+│	･
+│	･
+│	･
+│
+├─<dir>used/ 
+│	│
+│	│
+│	├<dir> id_name/
+│	│	├ image.jpg
+│	│	└ info.dat
+│	･
+│	･
+│	･
+│	･
+
+
+
+//------------------------------------------------------------------------------
+// ユーザーディレクトリ以下の構造。
+//------------------------------------------------------------------------------
+
+/ (/home/omata_motors/)
+│
+├<dir> public_html/
+│	└････
+│
+├<dir>shell_scr/
+│	├<dir> cal_sys/
+│	│	├ cal_creator
+│	│	├ cal_utl.sh
+│	│	├ cal_utl.conf
+│	│

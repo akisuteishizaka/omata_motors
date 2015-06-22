@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+/* ページ全体デザイン設定
+	全てのページに於いて共通のデザイン定義
+*/
+
+/* スクロールバー有無によるデザインズレ対応 */
+/*
+html{
+   height: 100%;
+   margin-bottom: 1px;
+}
+*/
+
+/*  背景画像、色指定 */
+
+body{
+	background: #000000;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background-image: url(../img/orf_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+img {border-style:none;}
+
+a:link{color:#00cc00;}
+a:visited{color:#008800;}
+a:hover{color:#00ff00; /* background-color: #222222; */}
+a:active{color:#cccc00;}
+
+/* ページ全体の幅指定 */
+
+#all{width: 800px; margin-left: auto; margin-right: auto;}
+
+/* ロゴエリア指定*/
+#logo_area{height:120px;}
+
+/* リストタグ使用ナビゲーション共通CSS */
+.navi{position:relative;}
+.navi ul{list-style-type: none;}
+.navi li{float:left;}
+
+/* グローバルナビゲーション*/
+.gloval{height:50px; z-index: 3;}
+.gloval ul{margin: 0; padding-left: 0;}
+.gloval li{width:160px; margin-top: 0;}
+
+.gloval a{
+	display:block;
+	background: url(../img/btn01.gif);
+	width:160px;
+	height:50px;
+	text-indent:-100px;
+	text-decoration: none;
+	overflow:hidden;
+}
+
+.gnavi01 a{background-position: 0 0px;}
+.gnavi02 a{background-position: -160px 0px;}
+.gnavi03 a{background-position: -320px 0px;}
+.gnavi04 a{background-position: -480px 0px;}
+.gnavi05 a{background-position: -640px 0px;}
+
+.gnavi01 a:hover{background-position: 0 -50px;}
+.gnavi02 a:hover{background-position: -160px -50px;}
+.gnavi03 a:hover{background-position: -320px -50px;}
+.gnavi04 a:hover{background-position: -480px -50px;}
+.gnavi05 a:hover{background-position: -640px -50px;}
+
+.gnavi01 a:active{background-position: 0 -100px;}
+.gnavi02 a:active{background-position: -160px -100px;}
+.gnavi03 a:active{background-position: -320px -100px;}
+.gnavi04 a:active{background-position: -480px -100px;}
+.gnavi05 a:active{background-position: -640px -100px;}
+
+/* ページネーム、パンくずリスト */
+#pag_name{
+	text-align: right;
+	margin-top:5px;
+	color: #cccccc;
+	font-weight: bolder;
+	font-size: 90%;
+	}
+
+/* コンテンツエリア指定 */
+#contents{position: relative;}
+
+/* フッターエリア指定 */
+#footer{
+	top: 10px;
+	position:relative;
+	color: #888888;
+	font-size: 80%;
+	text-align: center;
+}
+/* フッターナビゲーション */
+.foot_navi{overflow: hidden;}
+
+.foot_navi ul{
+	display: inline;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	left: 50%;
+	float: left;
+}
+.foot_navi li{
+	list-style-type: none;
+	display: inline;
+	position: relative;
+	left: -50%;
+	margin: 0 7px;
+}
+#footer .copyright{text-align: right;}
+
+/* 配置関係 */
+.flo_right{float: right;}
+.flo_left{float: left;}
+.flo_clear{clear: both;}
+
+
+/*フォント関係。*/
+h1{
+	border-bottom:solid 1px #008000;
+	border-top:solid 1px #008000;
+	border-right:solid 1px #008000;
+	border-left:solid 7px #008000;
+	background-color: #002200;
+	font-size:x-large;
+	font-weight:bolder;
+	padding-left:5px;
+
+}
+
+h2{
+	border-bottom:solid 2px #008000;
+	border-left:solid 5px #008000;
+	background-color: #001000;
+	font-size:large;
+	font-weight:bolder;
+	padding-left:5px;
+} 
+
+h3{
+	border-bottom:solid 2px #008000;
+	font-size: medium;
+	font-weight:lighter;
+	padding-left:5px;
+}
+
+h4{
+	background: #001000;
+	font-size: medium;
+	font-weight:lighter;
+}
+
+.txt_small{font-size: small;}
+
+/* 以降、ページによって、可変する要素 */
+
+/* ローカルナビエリア指定*/
+#lovalnavi{width: 200px;}
+/* ローカルコンテンツエリア指定 */
+#main{width: 600px;}
+
+/* カレンダースタイル指定 */
+#calendar{margin-left: auto;margin-right:auto; width: 180px;}
+
+#calendar table{
+	text-align:center;
+	font-size: 80%;
+	border: double 2px transparent;
+	margin-bottom: 10px;
+	border-collapse:collapse; 
+}
+#calendar th{
+	background-color: #444444;
+	border-bottom: solid 3px #cc0000;
+}
+#calendar tr{border: solid 1px transparent;}
+#calendar td{
+	border: solid 2px #666666;
+	width: 18px;
+	padding: 2px;
+}
+#calendar .non{background: transparent;}
+#calendar .fir{background: #008800;}
+#calendar .lat{background: #000088;}
+#calendar .off{background: #880000;}
+
+/* */

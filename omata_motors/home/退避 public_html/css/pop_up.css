@@ -1,0 +1,29 @@
+@charset "utf-8";
+body{
+	background: #000000;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+a:link{color:#00cc00;}
+a:visited{color:#00cc00;}
+a:hover{color:#00ff00; /* background-color: #222222; */}
+a:active{color:#cccc00;}
+
+#pop_up{width: 600px; margin-left: auto; margin-right: auto;}
+
+#pag_name{
+	text-align: right;
+	margin-top:5px;
+	color: #cccccc;
+	font-weight: bolder;
+	font-size: 90%;
+	}
+
+#form_if_area,#input_chk{width: 500px; margin-left: auto; margin-right: auto;}
+#form_if_area,.txt_small{font-size: 80%;}
+p.center{text-align: center;}
+#input_chk{background: #444444;}
+
+input.mail_add {width: 300px;}
+textarea.text_area{width:100%; height:150px;}

@@ -1,0 +1,56 @@
+#!/bin/bash
+# カレンダークリエイター。
+# HTMLのテーブルを使用してカレンダーを出力するシェルスクリプト。
+# 既存のファイルがぞんざいする場合は上書きされてしまうので注意が必要。
+
+#シェルスクリプト絶対パス取得
+DIR=$(cd $(dirname $0);pwd)
+
+#外部共通関数読み込み
+. ${DIR}/cal_utl.conf
+# 今月カレンダーファルル名      file_name
+# 来月カレンダーファイル名      file_name2
+# カレンダーファイル格納場所    file_dir
+
+TAGGING()
+{
+#使用方法 
+#TAGGING "引数1" "引数2" "引数3"
+# 引数1 書きだすファイル名
+# 引数2 月
+# 引数3 年
+
+RETURN_FILE="$1"
+MON="$2"
+YEAR="$3"
+
+# classの指定は全部で3箇所のはず･･･。
+cal ${MON} ${YEAR} | sed -e 's/   /null /g' | tr -s " " \
+| sed -e '2,$s/ /<\/td><td class=\"non\">/g' | tr "\n" ":" \
+| sed -e 's/:/<\/td><\/tr>\n<tr><td class=\"non\">/g' \
+-e 's/<td class=\"non\"><\/td>//g' -e 's/null//g' \
+| sed "1c <tr><th colspan=\"7\" class=\"cal_tit\" abbr=\"calendar month\">${YEAR} ${MON}月<\/th><\/tr>" \
+| sed -e 's/<tr><\/tr>//' \
+| sed -e '$d' > ${file_dir}${RETURN_FILE}
+
+
+#------保守--------
+# カレンダーの出力、空白をnullに変更、無駄なスペース削除。
+#cal ${MON} ${YEAR} | sed -e 's/   /null /g' | tr -s " " \
+# 2行目から<td>タグ添付。改行を暫定的に記号へ変換。
+#| sed -e '2,$s/ /<\/td><td class=\"non\">/g' | tr "\n" ":" \
+# 改行記号を</td></tr>へ変換。次行の先頭に<tr><td>追加
+#| sed -e 's/:/<\/td><\/tr>\n<tr><td class=\"non\">/g' \
+# 意味のない<td></td>を削除後nullを削除。	
+#-e 's/<td class=\"non\"><\/td>//g' -e 's/null//g' \
+# 月、年表示の書式を固定。
+#| sed "1c <tr><th colspan=\"7\">${YEAR} ${MON}月<\/th><\/tr>" \
+# <tr></tr>を削除。
+#| sed -e 's/<tr><\/tr>//' \
+# 最終行を整えてファイルに出力。
+#| sed -e '$d' > ${file_dir}${RETURN_FILE}
+#----保守終了--------
+
+#書きだしたファイルのパーミッション変更。他ユーザの読み込み書き込み可能へ。(PHP対策)
+chmod 666 ${file_dir}${RETURN_FILE}
+}

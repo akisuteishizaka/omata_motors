@@ -1,0 +1,316 @@
+@charset "utf-8";
+
+/* ページ全体デザイン設定
+	全てのページに於いて共通のデザイン定義
+*/
+
+/* スクロールバー有無によるデザインズレ対応 */
+/*
+html{
+   height: 100%;
+   margin-bottom: 1px;
+}
+*/
+
+/*  背景画像、色指定 */
+
+body{
+	background: #000000;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background-image: url(../img/omata_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+img {border-style:none;}
+
+a:link{color:#00cc00;}
+a:visited{color:#008800;}
+a:hover{color:#00ff00; /* background-color: #222222; */}
+a:active{color:#cccc00;}
+
+/* ページ全体の幅指定 */
+
+#all{width: 800px; margin-left: auto; margin-right: auto;}
+
+/* ロゴエリア指定*/
+#logo_area{height:120px;}
+
+/* リストタグ使用ナビゲーション共通CSS */
+.navi{position:relative;}
+.navi ul{list-style-type: none;}
+.navi li{float:left;}
+
+/* グローバルナビゲーション*/
+.gloval{height:50px; z-index: 3;}
+.gloval ul{margin: 0; padding-left: 0;}
+.gloval li{width:160px; margin-top: 0;}
+
+.gloval a{
+	display:block;
+	background: url(../img/btn01.gif);
+	width:160px;
+	height:50px;
+	text-indent:-100px;
+	text-decoration: none;
+	overflow:hidden;
+}
+
+.gnavi01 a{background-position: 0 0px;}
+.gnavi02 a{background-position: -160px 0px;}
+.gnavi03 a{background-position: -320px 0px;}
+.gnavi04 a{background-position: -480px 0px;}
+.gnavi05 a{background-position: -640px 0px;}
+
+.gnavi01 a:hover{background-position: 0 -50px;}
+.gnavi02 a:hover{background-position: -160px -50px;}
+.gnavi03 a:hover{background-position: -320px -50px;}
+.gnavi04 a:hover{background-position: -480px -50px;}
+.gnavi05 a:hover{background-position: -640px -50px;}
+
+.gnavi01 a:active{background-position: 0 -100px;}
+.gnavi02 a:active{background-position: -160px -100px;}
+.gnavi03 a:active{background-position: -320px -100px;}
+.gnavi04 a:active{background-position: -480px -100px;}
+.gnavi05 a:active{background-position: -640px -100px;}
+
+/* ページネーム、パンくずリスト */
+#pag_name{
+	text-align: right;
+	margin-top:5px;
+	color: #cccccc;
+	font-weight: bolder;
+	font-size: 90%;
+	}
+
+/* コンテンツエリア指定 */
+#contents{position: relative;}
+
+/* フッターエリア指定 */
+#footer{
+	top: 10px;
+	position:relative;
+	color: #888888;
+	font-size: 80%;
+	text-align: center;
+}
+/* フッターナビゲーション */
+.foot_navi{overflow: hidden;}
+
+.foot_navi ul{
+	display: inline;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	left: 50%;
+	float: left;
+}
+.foot_navi li{
+	list-style-type: none;
+	display: inline;
+	position: relative;
+	left: -50%;
+	margin: 0 7px;
+}
+#footer .copyright{text-align: right;}
+
+/* 配置関係 */
+.flo_right{float: right;}
+.flo_left{float: left;}
+.flo_clear{clear: both;}
+
+/* 幅指定 */
+.narrow {width: 200px;}
+
+
+/*フォント関係。*/
+h1{
+	border-bottom:solid 1px #008000;
+/*	border-top:solid 1px #008000; */
+	border-right:solid 7px #008000;
+	border-left:solid 7px #008000;
+/*	background-color: #002200; */
+	font-size:x-large;
+	font-weight:bolder;
+	padding-left:5px;
+
+}
+
+h2{
+	border-bottom:solid 2px #008000;
+	border-left:solid 5px #008000;
+/*	background-color: #001000; */
+	font-size:large;
+	font-weight:bolder;
+	padding-left:5px;
+} 
+
+h3{
+	border-bottom:solid 1px #008000;
+	font-size: medium;
+	font-weight:lighter;
+	padding-left:5px;
+}
+
+h4{
+	background: #001000;
+	font-size: medium;
+	font-weight:lighter;
+}
+
+.txt_small{font-size: small;}
+
+/*お遊び。道路標識風*/
+.highway{background: #007929; color: #ffffff; font-weight: bolder; border:solid 3px #ffffff; padding:5px;}
+.route{background: #08409C; color: #ffffff; font-weight: bolder; border:solid 3px #ffffff; padding:5px;}
+
+/* 以降、ページによって、可変する要素 */
+/* コンテンツエリア基本テーブル指定 */
+
+#contents table{
+	border-collapse:collapse; 
+	border: solid 2px #666666;
+}
+#contents th{border: solid 2px #666666;}
+#contents td{border: solid 2px #666666;}
+
+/* ローカルナビエリア指定*/
+#lovalnavi{width: 200px;}
+/* ローカルコンテンツエリア指定 */
+#main{width: 600px;}
+
+/* カレンダースタイル指定 */
+#calendar{margin-left: auto;margin-right:auto; width: 180px;}
+
+#calendar table{
+	text-align:center;
+	font-size: 80%;
+	border: double 2px transparent;
+	margin-bottom: 10px;
+}
+#calendar th{
+	background-color: #444444;
+	border-bottom: solid 3px #cc0000;
+}
+#calendar td{
+	width: 18px;
+	padding: 2px;
+}
+#calendar .non{background: transparent;}
+#calendar .fir{background: #008800;}
+#calendar .lat{background: #000088;}
+#calendar .off{background: #880000;}
+
+/* 以下、個別ページ指定 */
+/* トップページ トピック指定 */
+#topic{
+	font-size: medium;
+	text-align: center;
+	color: #ffffff;
+	font-weight: normal;
+	border: groove  2px  #00cc00;
+	padding: 5px;
+	margin: 5px 50px;
+	background-color: #222222;
+}
+
+/* トップページ 新着情報指定 */
+/* 新着情報スクロールバー */
+#what_n{height:200px; overflow:auto;}
+
+
+/* 店舗案内 caution指定 */
+p#caution {border:double 10px #000000; font-size: 80%; background: #ffff00; color: #000000; padding: 5px;}
+p#caution .cau_indx{font-size: 120%;}
+p#caution .cau_cau{color: #ff0000; font-weight: bolder;}
+
+/*店舗案内 店舗情報テーブルスタイル指定。*/
+#store_info table{margin-left:auto; margin-right:auto; /* width: 450px; */}
+#store_info td{padding: 2px 5px;}
+#store_info .col1{background: #003300; width: auto;}
+#store_info .col2{width: auto;}
+
+#link_list .col1{width: 200px;}
+#link_list .col2{width: 500px;}
+
+
+/* 中古情報ページ関連指定 */
+
+/* 検索指定 */
+#search_from{width: 700px; margin-left: auto; margin-right: auto;}
+#search_from div{margin-top: 5px; margin-bottom: 5px;}
+#search_checkbox{width: 600px;  margin-left: auto; margin-right: auto;}
+#search_checkbox div{float:left ;width: 200px;}
+
+#search_from .button_area{width: 150px; margin-left: auto; margin-right: auto;}
+#search_from .button{height:25px; width: 150px;}
+
+/* 検索結果テーブル指定 */
+#search_result{}
+
+#search_result table{
+	font-size: 90%;
+	width: 800px;
+}
+
+#search_result col.name{width: 30%;}
+#search_result col.price{width: 10%;}
+#search_result col.color{width: 11%;}
+#search_result col.maker_code{width: 8%;}
+#search_result col.year{width: 7%;}
+#search_result col.mileage{width: 10%;}
+#search_result col.displacement{width: 7%;}
+#search_result col.insurance{width: 17%;}
+
+#search_result th{
+	background-color: #444444;
+}
+#search_result td{
+	padding-top: 2px; 
+	padding-bottom: 2px; 
+}
+
+/* 中古車詳細情報ビュワースタイル指定 */
+/* 画像領域指定*/
+#viewer{
+}
+
+#image{width: 640px;}
+#thumbnail{width: 160px;}
+#thumbnail ul{list-style-type: none; padding: 0px; margin:0px;}
+#thumbnail li{padding: 10px; margin:0px;}
+
+/* 値段表示指定*/
+#price .price{
+	font-size: 200%;
+	font-weight: bolder;
+}
+/* 車両詳細指定 */
+
+#details table{width: 640px; margin-left: auto; margin-right: auto;}
+
+#viewer .item{background: #003300; width: 20%;}
+#viewer .detail{width: 30%;}
+
+/* コメント、セールス指定*/
+#sale_comment{
+	border: solid  2px #666666;
+	padding: 5px;
+	background-color: #222222;
+	margin: 5px 10px;
+}
+/* ヘルプページスタイル指定 */
+#help_menu{}
+#help_menu li{list-style: none;}
+#help_contents{font-size: 80%;}
+#help_contents p{margin-left: 15px;}
+#help_contents ul{margin-left: 30px; padding-left: 0;}
+#help_contents a{right: 5px;}
+/*ダミーフォーム指定 */
+#sample_search div{border: solid  2px #666666;}
+#sample_search .sample_form_caution{font-weight: bolder;}
+#sample_search .sample_form{margin: 10px 5px;}
+#sample_search .button_area{width: 150px; margin-left: auto; margin-right: auto;}
+#sample_search .button{height:25px; width: 150px;}

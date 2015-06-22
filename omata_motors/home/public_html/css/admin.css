@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+body{
+	background: #000000;
+	color: #ffffff;
+	margin-top: 10px;
+}
+a:link{color:#00ff00;}
+a:visited{color:#00ff00;}
+a:hover{color:#00ff00; /* background-color: #222222; */}
+a:active{color:#cccc00;}
+
+/* ページ全体の幅指定 */
+#all{width: 800px; margin-left: auto; margin-right: auto;}
+
+/* 配置関係 */
+.flo_right{float: right;}
+.flo_left{float: left;}
+.flo_clear{clear: both;}
+
+/*フォント関係。*/
+h1{
+	border-bottom:solid 1px #008000;
+	border-top:solid 1px #008000;
+	border-right:solid 1px #008000;
+	border-left:solid 7px #008000;
+	background-color: #002200;
+	font-size:x-large;
+	font-weight:bolder;
+	padding-left:5px;
+
+}
+
+h2{
+	border-bottom:solid 2px #008000;
+	border-left:solid 5px #008000;
+	background-color: #001000;
+	font-size:large;
+	font-weight:bolder;
+	padding-left:5px;
+} 
+
+h3{
+	border-bottom:solid 2px #008000;
+	font-size: medium;
+	font-weight:lighter;
+	padding-left:5px;
+}
+
+h4{
+	background: #001000;
+	font-size: medium;
+	font-weight:lighter;
+}
+
+.txt_small{font-size: small;}
+
+table{
+	border: solid 2px #666666;
+	border-collapse:collapse; 
+}
+th{border: solid 2px #666666;}
+td{border: solid 2px #666666;}
+
+/* カレンダー関連 */
+
+#calendar table{
+	text-align:center;
+	font-size: 80%;
+	float: left;
+	margin: 0px 10px;
+	border: double 2px transparent;
+}
+#calendar th{
+	background-color: #444444;
+}
+#calendar td{
+	width: 18px;
+	padding: 2px;
+}
+
+.non{background: transparent;}
+.fir{background: #008800;}
+.lat{background: #000088;}
+.off{background: #880000;}
+
+
+/* お知らせ関連 */
+/* 新着情報スクロールバー */
+#what_n{height:200px; overflow:auto; width:600px;}
+
+
+/* トップページ トピック指定 */
+#topic{
+	font-size: medium;
+	text-align: center;
+	color: #ffffff;
+	font-weight: normal;
+	border: groove  2px  #00cc00;
+	padding: 5px;
+	margin: 5px 50px;
+	background-color: #222222;
+}
+
+
+/* 統計情報 テーブル指定 */
+#statistics{font-size: 80%; /*height:150px; overflow:auto;*/}
+#stat_name{width:270px;}
+#stat_name table{width:100%;}
+#stat_name td{height:17px;}
+#stat_cnt{width:530px; overflow:scroll; overflow-y: hidden;}
+#stat_cnt table{width:100%;}
+#stat_cnt td{text-align:right; padding-left:5px; padding-right: 5px; height:17px;}
